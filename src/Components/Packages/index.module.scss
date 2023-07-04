@@ -1,0 +1,147 @@
+.card{
+  position: relative;
+  padding: 0;
+  background: none !important;
+  z-index: 1;
+  margin: 0 0 30px !important;
+  height: calc(100% - 30px) !important;
+
+
+  &:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    box-shadow: 0px 128px 83px rgba(0, 0, 0, 0.06) !important;
+    z-index: -1;
+  }
+
+
+  .cardHeader{
+    position: relative;
+    padding: 30px;
+    border: none;
+    background: none !important;
+
+    &:before,
+    &:after{
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 60px;
+      bottom: 30px;
+      display: block;
+      background: #D9D9D93B;
+
+    }
+
+    &:before{
+      left: 0;
+      border-radius: 0 30px 30px 0;
+    }
+
+    &:after{
+      right: 0;
+      border-radius:  30px 0 0 30px;
+    }
+
+  }
+
+  .cardtTitle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    margin: 0 0 15px;
+  }
+
+  .price{
+    text-align: center;
+    margin: 0 0 15px;
+  }
+
+  .priceTitle{
+    font-size: 40px;
+    line-height: 44px;
+    color: #FF902A;
+    font-weight: 900;
+
+    sub{
+      font-size: 18px;
+      line-height: 22px;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      bottom: -2px;
+      margin: 0 3px;
+    }
+  }
+
+  h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #263238;
+  }
+
+  .cardBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px 80px !important;
+    margin: 0;
+    position: relative;
+    background: #fff;
+
+    &:after{
+      position: absolute;
+      content: '';
+      bottom: -21px;
+      left: 0;
+      width: 100%;
+      height: 22px;
+      background: url("../../Images/arrowpatern.png") repeat-x;
+    }
+
+    .fixBtn{
+      position: absolute;
+      bottom: 30px;
+      display: block;
+      width: calc(100% - 60px);
+    }
+
+  }
+
+  ul{
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 30px 0;
+
+    li{
+      position: relative;
+      padding: 0 0 0 30px;
+      margin: 0 0 10px;
+
+      &:before{
+        content: "\f00c";
+        font-family: "Font Awesome 5 Pro";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #72E6CB;
+        color: #0F9CA9;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

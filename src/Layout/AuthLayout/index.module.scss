@@ -1,0 +1,22 @@
+#wrapper{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #FAFBFC;
+}
+
+.logo{
+  position: relative;
+  width: 60px;
+  margin: 0 0 20px;
+
+  a{
+    display: block;
+  }
+
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,22 @@
+@import "src/Style/include-media";
+
+.logo {
+  position: relative;
+  width: 50px;
+  float: left;
+
+
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @include media("<xs-phone") {
+      width: 50px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "src/Style/include-media";
+
+.form{
+  position: relative;
+
+  .formGroup{
+    position: relative;
+    padding: 0 250px 0 50px;
+
+    @include media ("<phone"){
+      padding: 0 0 0 50px;
+    }
+  }
+
+  button{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include media ("<phone"){
+      position: static;
+      margin: 10px 0 0;
+      width: 100%;
+    }
+  }
+
+  .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+
+
+  }
+
+  input{
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    background: rgba(255,255,255,0.12);
+    border-radius: 0;
+    color: #fff;
+    font-style: italic;
+
+    &:focus{
+      background: rgba(255,255,255,0.2);
+      box-shadow: none;
+      color: #fff;
+    }
+
+    &::placeholder{
+      color: #fff;
+    }
+  }
+}

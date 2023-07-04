@@ -1,0 +1,18 @@
+.section{
+  padding: 15px 0;
+
+  .imgBox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    margin: 10px;
+
+    img{
+      max-height: 40px;
+      max-width: 120px;
+      display: block;
+    }
+  }
+}

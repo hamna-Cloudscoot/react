@@ -1,0 +1,70 @@
+@import "src/Style/include-media";
+
+.section{
+  background-color: #ECEFF3;
+  padding: 150px 0;
+  position: relative;
+  @include media("<phone"){
+    padding: 70px 0;
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 130%;
+    height: 100px;
+    background-color: #0A3D58;
+    left: -22px;
+    transform: rotate(3deg);
+    display: block;
+    top: -56px;
+    margin: 0 0 -58px;
+  }
+ 
+  div[class*="row"]{
+    background-color: #fff;
+    &.video{
+      flex-direction: row-reverse;
+    }
+  }
+
+}
+.imgBox{
+  position: relative;
+
+
+  @include media ("<tablet"){
+    max-width: 500px;
+    margin: 20px auto;
+  }
+
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.textBox{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #B6B6B6;
+ max-width: 400px;
+ margin: auto;
+ font-style: italic;
+ @include media("<tablet"){
+  padding: 30px 0 0 ;
+ }
+ h3{
+  color: #4D4D4D;
+  font-style: normal;
+ }
+}

@@ -1,0 +1,25 @@
+@import "src/Style/include-media";
+.card {
+  position: relative;
+  background: #fff;
+  padding: 0 25px 25px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 42px 40px -38px rgba(0, 0, 0, 0.11) !important;
+  border: 1px solid #F3F3F3 !important;
+  margin-top: 50px;
+  @include media("<widescreen"){
+    margin-top: 0;
+  }
+
+  .header {
+    background: #FCFAF1;
+    border: none;
+    text-align: center;
+    padding: 50px 25px 25px;
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      margin: 0 0 15px;
+    }
+  }
+}

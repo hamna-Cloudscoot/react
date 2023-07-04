@@ -1,0 +1,16 @@
+.imgBox {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+  }
+}
+
+.cardBody {
+  padding: 50px !important;
+}

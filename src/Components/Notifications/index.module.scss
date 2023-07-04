@@ -1,0 +1,125 @@
+.notification{
+  position: relative;
+
+  .counter{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF754C;
+    color: #fff;
+    font-size: 12px;
+
+  }
+
+  .dropDownMenuNoti{
+    border: none;
+    border-radius: 0;
+    padding: 15px;
+    width: 500px;
+    transform: none;
+    margin: 25px -40px 0 0;
+
+    &:before{
+      position: absolute;
+      top: -10px;
+      right: 54px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 7.5px 10px 7.5px;
+      border-color: transparent transparent #fff transparent;
+    }
+
+    h6,
+    h5{
+      font-family: "Poppins", sans-serif;
+    }
+
+    h6{
+      font-weight: 600;
+    }
+
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 10px 0 0 !important;
+
+      li{
+        margin: 0 0 10px !important;
+        padding: 10px 60px 10px 75px;
+        position: relative;
+        background: rgba(228, 228, 228, 0.1);
+        color: #808191;
+
+        a{
+          padding: 0 !important;
+          display: inline-block;
+          text-decoration: underline;
+
+          &:hover{
+            text-decoration: none;
+            background: none !important;
+          }
+        }
+
+        time{
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          margin: 10px;
+
+        }
+
+        p{
+          margin: 0 0 5px;
+        }
+
+        .status{
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          display: block;
+          background: #00CC52;
+          margin: 3px;
+          position: absolute;
+          right: -5px;
+          bottom: 0;
+          border: 2px solid #fff;
+        }
+      }
+
+      .imgBox{
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+
+        padding: 5px !important;
+
+        img{
+          display: block;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: containS;
+          overflow: hidden;
+        }
+
+      }
+    }
+
+
+
+
+  }
+}
+

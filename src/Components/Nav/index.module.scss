@@ -1,0 +1,269 @@
+@import "src/Style/include-media";
+
+
+
+#nav{
+  position: relative;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 150px);
+
+  @include media ("<tablet"){
+    width: calc(100% - 80px);
+  }
+
+
+
+  &.dashboardNav{
+    margin: -20px 0;
+
+    ul{
+
+
+      li{
+        margin: 0 1px;
+
+        @include media ("<desktop"){
+          margin: 1px 0;
+        }
+
+        > a{
+          padding:15px;
+
+          &:hover{
+            background: #FFDB43;
+            color: #000;
+
+            i{
+              filter: grayscale(1) contrast(100) brightness(0);
+              mix-blend-mode: multiply;
+              opacity: 1;
+
+            }
+          }
+
+          i{
+            margin: 0 7px 0 0;
+            opacity: 0.35;
+
+            @include media ("<desktop"){
+              filter: grayscale(1) contrast(100) brightness(0);
+              mix-blend-mode: multiply;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+
+  > ul{
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    font-size: 14px;
+
+
+    @include media ("<widescreen"){
+      padding: 0 10px;
+    }
+
+    @include media ("<desktop"){
+      position: fixed;
+      top: 0;
+      left: -280px;
+      width: 265px;
+      display: block;
+      background: #fff;
+      padding: 20px 0;
+      height: 100vh;
+      z-index: 999999;
+    }
+
+    li{
+      position: relative;
+      margin: 0 15px;
+
+      @include media ("<widescreen"){
+        margin: 0 10px;
+      }
+
+      @include media ("<desktop"){
+        margin: 0;
+      }
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 0;
+        color: rgba(255,255,255,0.35);
+
+        @include media ("<desktop"){
+          padding: 10px 25px;
+          color: #000;
+          justify-content: flex-start;
+        }
+
+        &:hover{
+          color: #fff;
+
+          @include media ("<desktop"){
+            background: #FFDB43;
+            color: #3D3E3F;
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+.btnList{
+  position: relative;
+  display: flex;
+
+  @include media ("<desktop"){
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+
+  &.actionBtn{
+    display: flex;
+
+    > a[class*='btnNoti'],
+    button{
+      padding: 8px;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      position: relative;
+
+
+      &:hover{
+        color: #fff;
+        background: #FFDB43;
+      }
+
+      &:focus{
+        box-shadow: none;
+      }
+
+      &:after{
+        display: none;
+      }
+    }
+  }
+
+  .counter{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF754C;
+    color: #fff;
+    font-size: 12px;
+
+  }
+}
+
+.userDropdown {
+  position: relative;
+  .profile_icon {
+    color: #fff !important;
+    font-size: 16px !important;
+    margin-left: 8px;
+  }
+  button[class*="dropdown-toggle"] {
+    padding: 0 0 0 10px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    line-height: 38px;
+    position: relative;
+    color: #fff !important;
+
+    @include media("<xs-phone"){
+      font-size: 0;
+      padding: 0;
+      i{
+        display: none;
+      }
+    }
+
+    &:hover {
+      background: none;
+      color: #ffdb43 !important;
+      i {
+        color: #ffdb43 !important;
+      }
+    }
+
+    .userImg {
+      position: relative;
+      width: 38px;
+      height: 38px;
+      margin: 0;
+      margin-right: 8px;
+    }
+  }
+
+  .userImg {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  div[class*="dropdown-menu "] {
+    width: 250px;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px solid #efefef;
+
+    .header {
+      padding: 10px 0;
+    }
+
+    a {
+      display: block;
+      padding: 10px 15px;
+      border-top: 1px solid #efefef !important;
+
+      &:hover {
+        background: #efefef;
+      }
+    }
+
+    .name {
+      display: block;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}

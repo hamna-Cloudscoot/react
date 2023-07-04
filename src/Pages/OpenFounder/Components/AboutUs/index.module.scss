@@ -1,0 +1,41 @@
+@import "src/Style/include-media";
+
+.colList{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media ("<tablet"){
+    display: block;
+  }
+
+  .col{
+    flex: 0 0 33.3%;
+    padding: 10px;
+
+    @include media ("<tablet"){
+      padding: 0 0 15px;
+    }
+
+  }
+
+  .box{
+    padding: 25px;
+  }
+
+  .iconBox{
+    width: 80px;
+    height: 80px;
+    margin: 0 0 15px;
+
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .title{
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+}

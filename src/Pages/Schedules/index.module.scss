@@ -1,0 +1,16 @@
+.dayGrid{
+    position: relative;
+    overflow-y: auto;
+    margin-right: -13px;
+    overflow-x: hidden;
+    &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        top: 35px;
+        width: 100%;
+        display: block;
+        border-left: 2px solid rgba(221, 221, 221, 0.22);
+      } 
+}

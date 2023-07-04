@@ -1,0 +1,194 @@
+@import "src/Style/include-media";
+
+.viewRequest {
+  position: relative;
+  overflow: hidden;
+  margin: 50px 0;
+  padding: 50px 25px;
+  background: rgba(255, 255, 255, 0.4);
+
+  @include media("<desktop") {
+    padding: 25px 15px;
+    margin: 20px 0;
+  }
+
+  .requestHeader {
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 25px;
+    margin: 0 0 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: flex-start;
+
+    @include media("<desktop") {
+      align-items: flex-start;
+    }
+
+    .imgBoxHolder {
+      width: 160px;
+      height: 160px;
+      border-radius: 100%;
+      border: 2px dashed #ffdb43;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      position: relative;
+
+      @include media("<desktop") {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .description {
+      overflow: hidden;
+      padding: 15px 15px 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      @include media("<desktop") {
+        display: block;
+      }
+    }
+
+    .text {
+      position: relative;
+      width: 65%;
+
+      p {
+        margin: 0 0 5px;
+      }
+    }
+
+    .title {
+      font-size: 30px;
+      line-height: 36px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      margin: 0 0 5px;
+    }
+
+    .imgBox {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      @include media("<desktop") {
+        width: 70px;
+        height: 70px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .btnRow {
+      button {
+        margin: 2px;
+        height: 30px;
+        line-height: 28px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .status {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: block;
+    background: #00cc52;
+    margin: 3px;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+  }
+
+  .requestBody {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media("<desktop") {
+      display: block;
+    }
+
+    .col {
+      flex: 1 0 50%;
+      padding: 0 25px;
+
+      @include media("<desktop") {
+        padding: 0 0 15px;
+      }
+
+      &:last-child {
+        border-left: 1px solid rgba(0, 0, 0, 0.05);
+
+        @include media("<desktop") {
+          border: none;
+        }
+      }
+    }
+  }
+}
+.file_box {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  border: 1px dashed #d8d8d8;
+  border-radius: 5px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    padding: 8px;
+    object-fit: contain;
+  }
+
+  .textBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+      &:first-child {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #ed8e36;
+        margin: -10px 0 10px 0;
+      }
+    }
+  }
+}
+
+.fileUpload {
+  position: relative;
+  label {
+    border: 1px dashed #d8d8d8;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #a9a9a9;
+    p {
+      margin: 0;
+    }
+  }
+}

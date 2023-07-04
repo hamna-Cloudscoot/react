@@ -1,0 +1,22 @@
+#header{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+  z-index: 2;
+  background-color: #223430;
+
+
+
+
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+}

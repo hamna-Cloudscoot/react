@@ -1,0 +1,65 @@
+@import "../../Style/base";
+
+.invitationCard {
+    padding: 30px 20px 0 0px;
+
+    @include media("<tablet") {
+        padding: 30px 20px;
+    }
+
+    .title {
+        h6 {
+            font-family: inherit;
+        }
+    }
+
+    .boardRoomId {
+        background-color: #FAFAFA;
+        padding: 15px;
+        font-style: italic;
+        color: #8F92A1;
+
+        h5 {
+            font-family: 'Poppins';
+            font-weight: bold;
+            font-style: normal;
+            text-align: center;
+
+        }
+    }
+
+    .search {
+        input {
+            background-color: #FAFAFA;
+            color: #8F92A1;
+            background-image: url(../../Images/Union.png);
+            background-position: calc(100% - 95%) center;
+            padding: 0 10px 0 50px;
+
+            @include media("<tablet") {
+                padding-left: 70px;
+            }
+        }
+    }
+
+    [class*="dropdownContainer"] {
+        padding: 15px !important;
+        height: auto;
+        margin-bottom: 10px;
+        background-color: #FaFaFa;
+        border-radius: 0;
+
+        [class*="SelectDropDown_dropdownInput"] {
+            height: unset;
+            font-style: italic;
+            color: #8F92A1;
+            background-image: url(../../Images/searchIcon.svg);
+            background-position: right, center;
+            background-size: 20px;
+            background-repeat: no-repeat;
+            svg{
+                display: none;
+            }
+        }
+    }
+}

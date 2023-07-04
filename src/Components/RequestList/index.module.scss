@@ -1,0 +1,148 @@
+@import "src/Style/include-media";
+
+.userList {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 320px;
+
+  overflow-y: auto;
+
+  @include media("<widescreen") {
+    height: auto;
+  }
+
+  &.chatList {
+    li {
+      padding: 5px 70px;
+      cursor: pointer;
+      border-radius: 10px;
+
+      &:hover {
+        background: #FCFAF1;
+      }
+    }
+
+    .iconBox {
+      left: 10px;
+    }
+  }
+
+  li {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 0 120px 0 60px;
+    margin: 0 0 10px;
+
+    @include media ("<tablet") {
+      padding: 0 0 30px 60px;
+    }
+
+    .btnList {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0;
+
+      @include media ("<tablet") {
+        top: auto;
+        bottom: 0;
+      }
+
+      button {
+        height: 26px;
+        line-height: 24px;
+        margin: 1px;
+        padding: 0 10px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .statusBar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    display: flex;
+    align-items: center;
+
+
+    .status {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: block;
+      background: #00CC52;
+      margin: 3px;
+    }
+
+    .counter {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FF754C;
+      margin: 3px;
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+
+  .iconBox {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .timeSlot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 16px;
+    background: #FCFAF1;
+
+    @include media ("<tablet") {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+
+  h2 {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 5px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+.btnList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+
+  a {
+    padding: 0;
+  }
+}

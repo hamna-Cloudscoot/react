@@ -1,0 +1,35 @@
+@import "src/Style/include-media";
+
+#footer {
+  position: relative;
+  padding: 50px 0 0;
+  background: #223430;
+  overflow: hidden;
+
+  .copyright{
+    position: relative;
+    padding: 15px 0;
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+
+    &:after{
+      position: absolute;
+      content: '';
+      width: 9999px;
+      left: 50%;
+      height: 1px;
+      background: rgba(255,255,255,0.14);
+      top: 0;
+      transform: translateX(-50%);
+      display: block;
+    }
+  }
+
+  .extraPadding{
+    padding-left: 100px;
+
+    @include media ("<tablet-x"){
+      padding: 0;
+    }
+  }
+}

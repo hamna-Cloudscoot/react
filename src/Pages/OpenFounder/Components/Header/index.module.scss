@@ -1,0 +1,23 @@
+#header {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+  z-index: 9999;
+  background-color: #0F9CA9;
+  &[class*="navActive"] {
+    [class*="btn-navOpener"] {
+      color: #72E6CB !important;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}

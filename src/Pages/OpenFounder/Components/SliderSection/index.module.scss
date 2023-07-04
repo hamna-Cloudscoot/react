@@ -1,0 +1,118 @@
+@import "src/Style/include-media";
+.section {
+  padding: 0;
+
+  [class*="slick-slider"]{
+    padding: 0 55px;
+  }
+  button[class*="slick-arrow"] {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #dadada;
+    background: #fff;
+    color: #424f59;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    margin: 0 10px;
+
+    &:after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-left: 1px solid #000;
+      border-bottom: 1px solid #000;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+
+    &[class*="slick-next"] {
+      right: 0;
+      transform: rotate(-180deg);
+    }
+
+    &[class*="slick-prev"] {
+      left: 0;
+    }
+  }
+  [class*="slick-current"] {
+    .card {
+      background-color: #223430;
+      border-radius: 0;
+      .CardtextBox {
+        color: rgba(255, 255, 255, 0.5);
+        h6 {
+          color: #fff;
+        }
+      }
+    }
+    .textBox{
+     position: relative;
+     &:after{
+      position: absolute;
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 5px;
+      left: 0;
+      right: 0;
+      background-color: #222B40;
+     }
+    }
+  }
+}
+.card {
+  flex-direction: row !important;
+  align-items: center;
+  padding: 20px;
+  .avatar {
+    width: 80px;
+    margin-right: 20px;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  .CardtextBox {
+    color: rgba(26, 27, 33, 0.5);
+    h6 {
+      font-family: "Source Sans Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      color: #1a1b21;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+.textBox {
+  max-width: 335px;
+  margin: auto;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  @include media("<phone"){
+    max-width: 100%;
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+  h3 {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-size: 34px;
+    @include media ("<tablet"){
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+}

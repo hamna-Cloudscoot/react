@@ -1,0 +1,10 @@
+.contact_section {
+  background-color: #f5f5f5;
+  [class*="form-group"] {
+    [class*="form-control"] {
+      &::placeholder {
+        color: #0F9CA9 !important;
+      }
+    }
+  }
+}

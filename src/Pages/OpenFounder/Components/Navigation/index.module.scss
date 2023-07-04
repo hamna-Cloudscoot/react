@@ -1,0 +1,99 @@
+@import "src/Style/include-media";
+
+#nav {
+  position: relative;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 50px);
+  > ul {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    font-size: 14px;
+
+    @include media("<widescreen") {
+      padding: 0 10px;
+    }
+
+    @include media("<desktop") {
+      position: fixed;
+      top: 0;
+      left: -280px;
+      width: 265px;
+      display: block;
+      background: #fff;
+      padding: 20px 0;
+      height: 100vh;
+      z-index: 999999;
+    }
+
+    li {
+      position: relative;
+      margin: 0 15px;
+
+      @include media("<widescreen") {
+        margin: 0 10px;
+      }
+
+      @include media("<desktop") {
+        margin: 0;
+      }
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 0;
+        color: rgba(255, 255, 255, 0.35);
+
+        @include media("<desktop") {
+          padding: 10px 25px;
+          color: #000;
+          justify-content: flex-start;
+        }
+
+        &.active{
+          color: #fff;
+          background: none;
+        }
+
+        &:hover {
+          color: #fff;
+
+          @include media("<desktop") {
+            background: #ffdb43;
+            color: #3d3e3f;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btnList {
+  position: relative;
+  display: flex;
+
+  @include media("<desktop") {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+}
+
+.btn{
+  position: relative;
+  &:after{
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 50%;
+    height: 32px;
+    width: 3px;
+    background-color: #088692;
+    transform: translateY(-50%);
+  }
+}

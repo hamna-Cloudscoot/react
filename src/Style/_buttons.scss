@@ -1,0 +1,223 @@
+.btn {
+  padding: 0 20px;
+  border-radius: 0;
+  height: 40px;
+  line-height: 38px;
+  text-decoration: none;
+  font-family: $Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+
+  &.btn-primary {
+    color: #223430;
+    border-color: #FFDB43;
+    background: transparent;
+
+    &:hover {
+      background: #FFDB43;
+      color: #223430;
+    }
+  }
+  &.skip_btn{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    border: none;
+    margin: auto;
+    font-weight: 400;
+    &:hover{
+      background-color: transparent;
+      color: #223430;
+    }
+  }
+
+  &.round-50{
+    border-radius: 20px;
+  }
+
+  &.btn-light-blue{
+    background: #62C1D0;
+    color: #fff;
+
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+
+  &.btn-light-bluedark{
+    background: #0F9CA9;
+    color: #fff;
+
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+
+  &.action{
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 38px;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.btn-bgLight{
+    background: #EFEFEF;
+    color: #000;
+  }
+
+  &.btn-outline-dark{
+    border-color: #223430 !important;
+    color: #223430 !important;
+
+    &:hover{
+      border-color: #223430 !important;
+      background: #223430 !important;
+      color: #fff !important;
+    }
+  }
+
+  &.btn-userSidebarOpener{
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 20px;
+    display: none;
+    color: #223430;
+    background: #FFDB43;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    border-radius: 50%;
+
+    @include media ("<tablet"){
+      display: flex;
+    }
+  }
+  &.btn-navOpener{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 20px;
+    display: none;
+    margin-right: -8px;
+
+    @include media ("<desktop"){
+      display: flex;
+    }
+  }
+
+  &.btn-transparent{
+    border-color: transparent;
+    background: transparent;
+  }
+
+  &.btn-light{
+    border-color: #DADADA;
+    color: #223430;
+    background: transparent;
+  }
+
+  &.btn-white{
+    border-color: #DADADA;
+    color: #fff;
+    background: transparent;
+  }
+
+  &.btn-light-outline{
+    border-color: rgba(255,255,255,0.19);
+    color: #223430;
+    background: transparent;
+  }
+
+
+  &.btn-secondary {
+    border-color: #FFDB43;
+    background: #FFDB43;
+    color: #223430;
+
+    &:hover {
+      background: #d7b528;
+    }
+  }
+
+  &.btn-delete{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E02121;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 0;
+  }
+  &.btnIcon {
+    color: rgba(38, 50, 56, 1);
+    height: 50px;
+    line-height: 50px;
+    &:hover {
+      i,
+      img {
+        transform: translateX(3px);
+        transition: all ease 0.3s;
+      }
+    }
+    i {
+      background-color: rgba(255, 255, 255, 0.34);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      line-height: 30px;
+      text-align: center;
+      margin-left: 10px;
+      transform: translateX(0px);
+      transition: all ease 0.3s;
+    }
+
+    img {
+      transform: translateX(0px);
+      transition: all ease 0.3s;
+      width: 42px;
+    }
+  }
+
+  &.btn-video{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 20px;
+    padding: 0;
+    margin: 10px;
+
+    &:after{
+      position: absolute;
+      content: '';
+      border: 10px solid rgba(255,255,255,0.5);
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border-radius: 50%;
+    }
+  }
+
+
+}

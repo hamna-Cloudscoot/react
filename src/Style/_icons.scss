@@ -1,0 +1,37 @@
+.setting,
+.bell,
+.dashboard,
+.usergroup,
+.cam,
+.calendar,
+.envelop{
+  display: inline-block;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-size: 22px;
+  background-repeat: no-repeat;
+  margin: 2px;
+}
+.envelop{
+  background-image: url(../Images/envelop.svg);
+}
+.bell{
+  background-image: url(../Images/bell.svg);
+}
+.setting{
+  background-image: url(../Images/setting.svg);
+}
+.dashboard{
+  background-image: url(../Images/dashboard.svg);
+}
+.cam{
+  background-image: url(../Images/cam.svg);
+}
+.usergroup{
+  background-image: url(../Images/usergroup.svg);
+}
+.calendar{
+  background-image: url(../Images/calendar.svg);
+}

@@ -1,0 +1,12 @@
+.imgBox{
+  position: relative;
+  overflow: hidden;
+
+  img{
+    display: block;
+    width: 100%;
+    height:400px;
+    object-fit: contain;
+  }
+}
+

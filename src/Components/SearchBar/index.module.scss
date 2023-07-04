@@ -1,0 +1,23 @@
+.searchBar{
+  position: relative;
+
+  input{
+    position: relative;
+    padding: 0 50px 0 20px;
+    background-image: url("../../Images/searchIcon.svg");
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.05);
+    background-size: 20px;
+    background-position: calc(100% - 10px) center;
+    height: 60px;
+    border: 1px solid transparent;
+    line-height: 60px;
+    border-radius: 0;
+    font-style: italic;
+
+    &:focus{
+      box-shadow: none;
+      border-color: #292F34;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.modal {
+    z-index: 99999999 !important;
+    div[class*="modal-content"] {
+        background-color: #fff;
+    }
+
+    .formGroup {
+        [class*="dropdownContainer"] {
+            padding: 15px !important;
+            height: auto;
+            background-color: #F7F7F7;
+        }
+
+        [class*="react-datepicker-wrapper"] {
+            input {
+                background-image: url(../../Images/Calendar.png);
+                background-position: center right 10px;
+                background-size: 19px;
+                background-repeat: no-repeat;
+
+            }
+
+        }
+
+        .timePicker{
+            background-image: url(../../Images/TimeCircle.png) !important;
+        }
+
+        label {
+            position: relative;
+            padding-left: 0;
+            font-weight: 700;
+            color: #000;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 15px !important;
+            height: auto;
+            background-color: #F7F7F7;
+        }
+
+        &.ZoomLink {
+            .zoomTitle {
+                background-color: #FFDB43;
+                width: 120px;
+                text-align: center;
+                padding: 18px 0;
+                position: absolute;
+                left: 0;
+                border-radius: 5px 0 0 5px;
+            }
+
+            input {
+                padding: 12px !important;
+                padding-left: 130px !important;
+            }
+        }
+
+        .btn {
+            border: none;
+            vertical-align: bottom;
+
+            &:hover {
+                background-color: transparent;
+                color: #FFDB43;
+
+            }
+        }
+    }
+}
+
+.selectMenu{
+    max-height: 120px;
+    margin-right: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .scroller{
+        min-height: 120px;
+        height: 120px;
+        overflow-y: auto;
+        margin-right: -12px;
+        overflow-x: hidden;
+        input{
+            border-color: #FFDB43;
+            &:checked{
+                background-image: linear-gradient(to bottom right, #FFDB43 , #FFDB43) !important;
+            }
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+}

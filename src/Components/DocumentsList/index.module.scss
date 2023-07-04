@@ -1,0 +1,87 @@
+@import "src/Style/include-media";
+
+.colList{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+
+
+
+  .col{
+    padding: 10px;
+    flex: 0 0 33.3%;
+
+    @include media ("<tablet-x") {
+      flex: 0 0 50%;
+    }
+
+    @include media ("<phone") {
+      flex: 0 0 100%;
+      padding: 0 0 15px;
+    }
+  }
+
+  .box{
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .star{
+    border: none;
+    color: rgba(0,0,0,0.1) !important;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:hover{
+      color: #000 !important;
+      background: none !important;
+    }
+  }
+
+  .imgBox{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+
+    img{
+      display: block;
+      max-width: 70px;
+      max-height: 80px;
+    }
+  }
+
+  .title{
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 0 15px;
+    font-weight: 700;
+  }
+
+  .colFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.actionList{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+
+  button{
+    margin: 2px;
+  }
+}
