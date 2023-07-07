@@ -16,10 +16,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-        
-    - name: Install package
-      run: cp ../yarn.lock .
-    
+
     - name: Build React app
       run: yarn install
 
