@@ -11,7 +11,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
@@ -21,12 +21,12 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16
+        
+    - name: Install package
+      run: yarn install
     
     - name: installing yarn
       run: npm install yarn -g
-      
-    - name: Install package
-      run: yarn install
-
+    
     - name: Build React app
       run: yarn build
