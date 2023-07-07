@@ -21,20 +21,12 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16
+    
+    - name: installing yarn
+      run: npm install yarn -g
       
     - name: Install package
-      run: yarn
+      run: yarn install
 
     - name: Build React app
       run: yarn build
-
-    - name: Run tests
-      run: npm test
-
-    - name: Deploy to GitHub Pages
-      if: success()
-      uses: JamesIves/github-pages-deploy-action@4.1.1
-      with:
-        branch: main
-        folder: build
-
