@@ -18,7 +18,10 @@ jobs:
       uses: actions/checkout@v2
         
     - name: Install package
-      run: yarn install
+      run: cp ../yarn.lock .
     
     - name: Build React app
+      run: yarn install
+
+    - name: Install package
       run: yarn build
