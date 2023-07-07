@@ -17,9 +17,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: v16.18.1
+          
+      - name: install node
+        run:  nvm install v16.18.1
 
       - name: Install dependencies
-        run: npm install
+        run: npm install yarn
+        
+      - name: Install dependencies
+        run: npm install yarn -g
 
       - name: Build project
-        run: npm run build
+        run: yarn build
