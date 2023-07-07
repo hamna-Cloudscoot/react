@@ -20,8 +20,5 @@ jobs:
     - name: Install package
       run: yarn install
     
-    - name: installing yarn
-      run: npm install yarn --global
-    
     - name: Build React app
       run: yarn build
