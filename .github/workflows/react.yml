@@ -17,8 +17,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Build React app
+    - name: Install package
       run: yarn install
 
-    - name: Install package
+    - name: Build React app
       run: yarn build --silent
+      env:
+        CI: FALSE
+      
