@@ -21,4 +21,4 @@ jobs:
       run: yarn install
 
     - name: Install package
-      run: yarn build --slient
+      run: yarn build --silent
