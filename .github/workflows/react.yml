@@ -20,13 +20,14 @@ jobs:
     - name: Install package
       run: yarn install
       
+    - name: copy Env
+      run: cp /home/.env /var/www/actions-runner/_work/react/react/
+       
     - name: Build React app
       run: yarn build --silent
       env:
         CI: FALSE
         
-    - name: copy Env
-      run: cp /home/.env /var/www/actions-runner/_work/react/react/build
         
     - name: copy htaccess
       run: cp /home/.htaccess /var/www/actions-runner/_work/react/react/build
