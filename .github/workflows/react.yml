@@ -29,6 +29,7 @@ jobs:
         CI: FALSE
         
   deploy:
+  
     runs-on: self-hosted
 
     steps:
