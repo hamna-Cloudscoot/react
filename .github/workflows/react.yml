@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v2
         
     - name: Install package
-      run: yarn install
+      run: npm install -g yarn
       
     - name: copy Env
       run: cp /home/.env /home/hamna/actions-runner/_work/react/react
