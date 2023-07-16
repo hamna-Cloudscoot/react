@@ -21,12 +21,12 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '14'
-
-    - name: Install package
-      run: yarn install
       
     - name: copy Env
       run: cp /home/.env /var/www/actions-runner/_work/react/react/
+      
+    - name: Install package
+      run: yarn install
        
     - name: Build React app
       run: yarn build --silent
