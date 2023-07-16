@@ -23,7 +23,7 @@ jobs:
         node-version: '14'
       
     - name: copy Env
-      run: cp /home/.env /var/www/actions-runner/_work/react/react/
+      run: cp /home/.env /home/hamna/actions-runner/_work/react/react
       
     - name: Install package
       run: yarn install
@@ -35,6 +35,6 @@ jobs:
         
         
     - name: copy htaccess
-      run: cp /home/.htaccess /var/www/actions-runner/_work/react/react/build
+      run: cp /home/.htaccess /home/hamna/actions-runner/_work/react/react
       
       
