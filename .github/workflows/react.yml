@@ -31,9 +31,7 @@ jobs:
       run: cp /home/.env /home/hamna/actions-runner/_work/react/react
        
     - name: Build React app
-      run: yarn build --silent
-      env:
-        CI: FALSE
+      run: yarn build
          
     - name: copy htaccess
       run: cp /home/.htaccess /home/hamna/actions-runner/_work/react/react
