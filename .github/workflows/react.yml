@@ -17,16 +17,17 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       
-    - name: Set up Node.js
+    - name: Set up Node.js and Yarn
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '14' # Specify the desired Node.js version
+        cache: 'yarn' # Cache Yarn packages for faster installation
+        
+    - name: Install package
+      run: yarn install
       
     - name: copy Env
       run: cp /home/.env /home/hamna/actions-runner/_work/react/react
-      
-    - name: Install package
-      run: yarn install
        
     - name: Build React app
       run: yarn build --silent
