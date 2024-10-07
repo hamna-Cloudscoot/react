@@ -1,4 +1,4 @@
-name: React App CI
+name: React App CI/CD
 
 on:
   workflow_dispatch:  # Enables manual triggering of the workflow
