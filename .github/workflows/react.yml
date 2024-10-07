@@ -1,10 +1,10 @@
 name: React App CI
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  push:           # This will apply to all branches
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+  workflow_dispatch:  # Enables manual triggering of the workflow
 
 jobs:
   build:
